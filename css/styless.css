@@ -5,6 +5,13 @@ body{
 
 ul,ol{
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 address{
@@ -13,15 +20,40 @@ address{
 
 a{
     text-decoration: none;
+    color: currentColor;
 }
 
 button{
     cursor: pointer;
 }
 
-.header {}
+img{
+    display: block;
+}
 
-.navigation {}
+.container{
+    max-width: 1166px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 32px;
+}
+
+.header-container{
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-right: 90px;
+}
 
 .logo {
     font-style: italic;
@@ -30,13 +62,19 @@ button{
     line-height: 111%;
     letter-spacing: -0.03em;
     color: #111;
+    display: flex;
+    align-items: center;
+    
 }
 
 .part-logo{
     font-style: italic;
 }
 
-.navigation-list {}
+.navigation-list {
+    display: flex;
+    gap: 24px;
+}
 
 .navigation-item {}
 
@@ -52,14 +90,23 @@ button{
 .navigation-link:hover {
     color: #fd9222;
 }
-.social-list {}
+.social-list {
+    display: flex;
+    gap: 14px;
+}
 
 .social-item {}
 
 .social-link {}
 
 .hero {
+    padding-bottom: 80px;
+}
+
+.hero-wrap{
+    padding: 380px 40px 40px 40px;
     background: rgba(17, 17, 17, 0.6);
+    border-radius: 30px;
 }
 
 .hero-title {
@@ -68,6 +115,13 @@ font-size: 28px;
 line-height: 121%;
 letter-spacing: -0.03em;
 color:#fff;
+max-width: 484px;
+margin-bottom: 32px;
+}
+
+.hero-buttons{
+    display: flex;
+    align-items: center;
 }
 
 .btn-buy {
@@ -75,12 +129,19 @@ color:#fff;
     font-size: 14px;
     background: #fd9222;
     color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 14px 40px;
+    margin-right: 14px;
 }
 
 .btn-made {
     font-weight: 600;
     font-size: 14px;
     color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    padding: 14px 40px;
 }
 
 .btn-scroll {
@@ -89,10 +150,13 @@ color:#fff;
     line-height: 129%;
     letter-spacing: -0.03em;
     color: #fff;
+    margin-left: auto;
 }
 
 .features {
     background-color: #1e1823;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .visually-hidden {
@@ -108,14 +172,22 @@ color:#fff;
     overflow: hidden;
 }
 
-.features-list {}
+.features-list {
+    display: flex;
+    gap: 88px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
 
-.features-item {}
+.features-item {
+    width: calc((100% - 88px * 2) / 3);
+}
 
 .features-subtitle {
     font-weight: 600;
     font-size: 18px;
     color: #fff;
+    margin-bottom: 18px;
 }
 
 .features-text {
@@ -126,7 +198,10 @@ color:#fff;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.ingredients {}
+.ingredients {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 .ingredients-title {
     font-weight: 600;
@@ -136,6 +211,9 @@ color:#fff;
     text-transform: uppercase;
     text-align: center;
     color:#111;
+    max-width: 412px; 
+    margin: 0 auto;
+    margin-bottom: 28px;
 }
 
 .part-title {
@@ -149,13 +227,30 @@ color:#fff;
     letter-spacing: -0.02em;
     text-align: center;
     color: #111;
+    max-width: 486px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
 }
 
-.ingredients-list {}
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+}
 
-.ingredients-item {}
+.ingredients-item {
+    width: calc((100% - 32px * 3)/ 4);
+    background-color: orangered;
+    border-radius: 15px;
+    padding: 28px 23px;
+    
 
-.ingredients-image {}
+}
+
+.ingredients-image {
+    margin-bottom: 36px;
+}
 
 .ingredients-subtitle {
     font-weight: 600;
@@ -163,9 +258,17 @@ color:#fff;
     line-height: 129%;
     letter-spacing: -0.02em;
     color: #111;
+    padding-left: 5px;
 }
 
-.made {}
+.made {
+    margin-bottom: 120px;
+}
+
+.made-flex{
+    display: flex;
+    gap: 20px;
+}
 
 .made-title {
     font-weight: 600;
@@ -175,6 +278,7 @@ color:#fff;
     text-transform: uppercase;
     text-align: center;
     color: #111;
+    margin-bottom: 50px;
 }
 
 .made-image {}
@@ -184,11 +288,15 @@ color:#fff;
     font-size: 18px;
     line-height: 133%;
     color: #111;
+    max-width: 350px;
+    margin-bottom: 28px;
 }
 
 .made-list {}
 
-.made-item {}
+.made-item:not(:last-child) {
+    margin-bottom: 24px;
+}
 
 .made-item-text {
     font-weight: 400;
